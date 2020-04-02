@@ -1,0 +1,140 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+         <link href="bootstrap.min.css" rel="stylesheet">
+     <link href="ui.css" rel="stylesheet">
+      <link href="theme.css" rel="stylesheet">
+      <link href="style.css" rel="stylesheet">
+        <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/toastr.min.css" rel="stylesheet">
+    
+        <title>Zonas Trabajo - Google Maps </title>
+
+    </head>
+    <body>
+    
+
+
+   <style>
+        body{
+            background: #323232;
+        }
+        #map-canvas {
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+        }
+    </style>
+
+
+    <div class="row" style="background: #323232">
+        <div class="col-md-6" >
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <h1><i class="icon-note"></i> <strong>Zona de Trabajo</strong></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel">
+                <div class="panel-content" style="padding-top: 10px;">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-6">
+                            <button type="button" style="margin-bottom:0px" class="btn btn-success btn-square btn-embossed col-md-12 col-sm-12 col-xs-12 btnListar"><i class="fa fa-sort-amount-desc"></i>Listado</button>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6">
+                            <button type="button" style="margin-bottom:0px" class="btn btn-primary btn-square btn-embossed col-md-12 col-sm-12 col-xs-12 btnGuardar "><i class="fa fa-floppy-o"></i>Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row auditoriaForm" >
+        <div class="col-md-12 col-sm-12" >
+            <div class="panel" >
+                <div class="panel-content" >
+                    <form  class="medium" role="form" id="frmNuevo" method="post" action="#">
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6">
+                                <!-- <input type="hidden" name="UsuarioID" id="usuarioId" value=@ViewBag.id /> -->
+                                 
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="txtNro">Logo</label>
+                                        <input type="text" class="form-control input-sm " id="txtLogo" name="RestauranteLogo" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="txtNro">Descripcion</label>
+                                        <input type="text" class="form-control input-sm " id="txtDescripcion" name="RestauranteDescripcion" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="txtNro">Nombre</label>
+                                        <input type="text" class="form-control input-sm " id="txtDireccion" name="RestauranteNombre" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="txtNro">Latitud</label>
+                                        <input type="text" class="form-control input-sm " id="txtLatitud" name="RestauranteLatitud" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="txtNro">Longitud</label>
+                                        <input type="text" class="form-control input-sm " id="txtLongitud" name="RestauranteLongitud" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group cbo">
+                                        <label class="control-label">Estado</label>
+                                        <select class="form-control" id="cboEstado" name="Estado">
+                                            <option value="">--Seleccione--</option>
+                                            <option value="1">Activo</option>
+                                            <option value="0">InActivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <input type="hidden" class="form-control input-sm " id="txtEstado" name="Estado" placeholder="">
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="txtNro">Buscar</label>
+                                        <input type="text" class="form-control input-sm " id="pac-input" name="" placeholder="Buscar">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div id="map-canvas"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+     <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+        <script type="text/javascript" src='https://maps.google.com/maps/api/js?key=AIzaSyCVE9GlwM_MZv_nXDNIwyr5cNXOacsay_4&libraries=places'></script>
+        <script src="locationpicker.jquery.min.js"></script>
+        <script src="ZonaTrabajoInsertarVista.js"></script>    
+        
+        <script src="plugins/toastr.min.js"></script>
+    </body>
+</html>
